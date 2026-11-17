@@ -1,0 +1,246 @@
+{
+  "nfes_ca": {
+    "selected": "nfes_ca_1",
+    "additional": [
+      "nfes_ca_2"
+    ],
+    "title": "Carbonized CA (NFES)",
+    "candidates": [
+      {
+        "id": "nfes_ca_1",
+        "source": "data/nfes_ca/CA-joao-1.txt",
+        "score": [
+          0,
+          0.1764417160564268,
+          -0.9988180712581574
+        ],
+        "warnings": []
+      },
+      {
+        "id": "nfes_ca_2",
+        "source": "data/nfes_ca/CA-joao-2.txt",
+        "score": [
+          0,
+          0.25761824380221393,
+          -0.9986451076814199
+        ],
+        "warnings": []
+      }
+    ]
+  },
+  "ffes_ca": {
+    "selected": "ffes_ca_2",
+    "additional": [
+      "ffes_ca_1"
+    ],
+    "title": "Carbonized CA (FFES)",
+    "candidates": [
+      {
+        "id": "ffes_ca_2",
+        "source": "data/ffes_ca/CA-2.txt",
+        "score": [
+          1,
+          0.5209402429869282,
+          -0.9976922735897188
+        ],
+        "warnings": [
+          "bound_or_weak_component:D2_centre"
+        ]
+      },
+      {
+        "id": "ffes_ca_1",
+        "source": "data/ffes_ca/CA-1.txt",
+        "score": [
+          1,
+          1.0545534853735892,
+          -0.9929281967358825
+        ],
+        "warnings": [
+          "bound_or_weak_component:D2_centre"
+        ]
+      }
+    ]
+  },
+  "ffes_ca_cb10": {
+    "selected": "ffes_ca_cb10_1",
+    "additional": [],
+    "title": "Carbonized CA + 10% carbon black (FFES)",
+    "candidates": [
+      {
+        "id": "ffes_ca_cb10_1",
+        "source": "data/ffes_ca_cb10/15CA-10CB-2.txt",
+        "score": [
+          0,
+          0.20767797676952135,
+          -0.9892005196411975
+        ],
+        "warnings": []
+      }
+    ]
+  },
+  "ffes_ca_cb20": {
+    "selected": "ffes_ca_cb20_2",
+    "additional": [
+      "ffes_ca_cb20_1"
+    ],
+    "title": "Carbonized CA + 20% carbon black (FFES)",
+    "candidates": [
+      {
+        "id": "ffes_ca_cb20_2",
+        "source": "data/ffes_ca_cb20/15CA-20CB-2.txt",
+        "score": [
+          1,
+          0.21297304503051953,
+          -0.9944118964820188
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_FWHM"
+        ]
+      },
+      {
+        "id": "ffes_ca_cb20_1",
+        "source": "data/ffes_ca_cb20/15CA-20CB-1.txt",
+        "score": [
+          2,
+          3.0850926654443063,
+          -0.9331583933728105
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_FWHM,D3_centre"
+        ]
+      }
+    ]
+  },
+  "ffes_ca_graphite": {
+    "selected": "ffes_ca_graphite_2",
+    "additional": [
+      "ffes_ca_graphite_1"
+    ],
+    "title": "Carbonized CA + 0.2% graphite (FFES)",
+    "candidates": [
+      {
+        "id": "ffes_ca_graphite_2",
+        "source": "data/ffes_ca_graphite/carbonized CA-0.2graphite-2.txt",
+        "score": [
+          1,
+          0.4784045956395917,
+          -0.9969623409598456
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_FWHM"
+        ]
+      },
+      {
+        "id": "ffes_ca_graphite_1",
+        "source": "data/ffes_ca_graphite/carbonized CA-0.2graphite-1.txt",
+        "score": [
+          2,
+          0.9365112951314603,
+          -0.9905997695211539
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_FWHM,D2_centre"
+        ]
+      }
+    ]
+  },
+  "ffes_novolak": {
+    "selected": "ffes_novolak_1",
+    "additional": [
+      "ffes_novolak_2"
+    ],
+    "title": "Carbonized Novolak (FFES)",
+    "candidates": [
+      {
+        "id": "ffes_novolak_1",
+        "source": "data/ffes_novolak/Novolac-1.txt",
+        "score": [
+          1,
+          0.2386960205341059,
+          -0.9891505703729905
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_FWHM"
+        ]
+      },
+      {
+        "id": "ffes_novolak_2",
+        "source": "data/ffes_novolak/Novolac-2.txt",
+        "score": [
+          2,
+          0.5288192538583731,
+          -0.9953005047990428
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_FWHM,D3_centre"
+        ]
+      }
+    ]
+  },
+  "ffes_novolak_cb15": {
+    "selected": "ffes_novolak_cb15_1",
+    "additional": [
+      "ffes_novolak_cb15_2"
+    ],
+    "title": "Carbonized Novolak + 15% carbon black (FFES)",
+    "candidates": [
+      {
+        "id": "ffes_novolak_cb15_1",
+        "source": "data/ffes_novolak_cb15/Novolac-CB15-1.txt",
+        "score": [
+          1,
+          0.557133483382116,
+          -0.9932021438124684
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_centre"
+        ]
+      },
+      {
+        "id": "ffes_novolak_cb15_2",
+        "source": "data/ffes_novolak_cb15/Novolac-CB15-2.txt",
+        "score": [
+          2,
+          0.5700873796528225,
+          -0.98308534857751
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_centre,D3_centre"
+        ]
+      }
+    ]
+  },
+  "cb_reference": {
+    "selected": "cb_reference_2",
+    "additional": [
+      "cb_reference_1"
+    ],
+    "title": "Carbon black reference",
+    "candidates": [
+      {
+        "id": "cb_reference_2",
+        "source": "data/cb_reference/CB-2.txt",
+        "score": [
+          1,
+          0.31131528294278177,
+          -0.9949133126821363
+        ],
+        "warnings": [
+          "bound_or_weak_component:D2_centre"
+        ]
+      },
+      {
+        "id": "cb_reference_1",
+        "source": "data/cb_reference/CB-1.txt",
+        "score": [
+          4,
+          0.5773536493891437,
+          -0.9786208141153482
+        ],
+        "warnings": [
+          "bound_or_weak_component:D4_centre,D4_FWHM,D2_centre,D2_FWHM"
+        ]
+      }
+    ]
+  }
+}

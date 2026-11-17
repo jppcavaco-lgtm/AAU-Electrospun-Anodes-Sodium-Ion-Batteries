@@ -1,0 +1,48 @@
+{
+  "original_scripts": {
+    "raman_integracao.py": "7ec24b2f8901850c1e7ea50dccc4b2cb9b54c71e77b9b133f6958850d81dfb42",
+    "raman_picos.py": "d72474fd3f1cb05ad9d4e069b3f570264fc22713c741a5640c51ab826a74421f",
+    "apresentacao_raman_20261101.py": "f35da68b40728a6abecc50c8051d3a99b7b96d23804b8cea8976768e91d9ac12"
+  },
+  "spectra": {
+    "data/nfes_ca/CA-joao-1.txt": "a4d3917c7a2496fc4f51d56e35a81ca6c80206d95a869a307f33bcf64069c160",
+    "data/nfes_ca/CA-joao-2.txt": "aa50db79b89e02328c37574dc89dd1428a1a4b413d527a43434c5674741fcdcb",
+    "data/ffes_ca/CA-1.txt": "d093ee9526f73613d92614da5a35fd1896dd24e72057afb05c3646d46c4a99c4",
+    "data/ffes_ca/CA-2.txt": "2502f492e419fc966168e5fb653bd57904dcd26d9cc2944ccdb9d43704d47e4a",
+    "data/ffes_ca_cb10/15CA-10CB-2.txt": "dc84bc7209b0d920023acef58db00d74e135eb3827065e55078326749f4f8dce",
+    "data/ffes_ca_cb20/15CA-20CB-1.txt": "b879b9b824762ce7eae6339eb7189e9793749f174fde34232f87b6e593479f38",
+    "data/ffes_ca_cb20/15CA-20CB-2.txt": "8e87773c12eedddc17df8caca768ca09d15229ce089b5768b2d12f39c8d3a6ee",
+    "data/ffes_ca_graphite/carbonized CA-0.2graphite-1.txt": "948cfc483afffb1d0f5b6dfea042569d95d2fe770bad612dfad9503650dbf70c",
+    "data/ffes_ca_graphite/carbonized CA-0.2graphite-2.txt": "d8bd6e975e113127e210d14b032c34b4fccedad2c30ba7df1fa9621c29e653eb",
+    "data/ffes_novolak/Novolac-1.txt": "5764e871a7528c28593e5b09387fd43aab930f3f02eb267af63bc0755a5957ce",
+    "data/ffes_novolak/Novolac-2.txt": "8aaaf773bc8edb007615b9b2a7af0debf1cae3671603f223eef88702c6486541",
+    "data/ffes_novolak_cb15/Novolac-CB15-1.txt": "9b4acf50a26662d3bfdfbdbd2aa5363d97835c84685c546c68e716b00f71e228",
+    "data/ffes_novolak_cb15/Novolac-CB15-2.txt": "27a707bf07f1df866651963a7142a51d07f66efd300ff269e9a2f4bac40570c4",
+    "data/cb_reference/CB-1.txt": "35b9e371ef8f3aa6fcaab33a3d9c9f335a1f517941e85e73f865704dd4755767",
+    "data/cb_reference/CB-2.txt": "f20e1e4fe054aa72277fcf017739b91f9ee67b9c464141cac93f0d20899cbfdd"
+  },
+  "saved_arrays": {
+    "nfes_ca_1.npz": "d6e05f16fadd370539fedb1eeb93f768406dd66323b1e04839c0a06179b38259",
+    "nfes_ca_2.npz": "d36ff9918706743e7c6343ae55c534f3aebc7351c006bdf35c74bc890903a8f6",
+    "ffes_ca_1.npz": "777e21930c1630fae05a893cc98dd4c85725519dcd4acf2b828b99be2cd8a0cb",
+    "ffes_ca_2.npz": "604b9c9cd55931afacf228db599163d6c8ff1b0da0ce75fbdf5cd26da922cc9c",
+    "ffes_ca_cb10_1.npz": "9125b1c47bbb573c21752f86c75c7a3e78cd870d4507fe22b37acf05fed85145",
+    "ffes_ca_cb20_1.npz": "6aeb3a8f02bb6948bbc78057bf64b20ceec2304df3f4b33da992fba72988e095",
+    "ffes_ca_cb20_2.npz": "fb23a05fa26496376d2a5d6ef7e2fffa06d930d0b6c6238066cd972201de7ba0",
+    "ffes_ca_graphite_1.npz": "f3d82e16fc7568a9a822d3cde38416d940e2251127b32ea748c3630446d3cb57",
+    "ffes_ca_graphite_2.npz": "93c8a53caf5622535b6b9456d2ddc8f28f3fbad57b8f6261e70275582958078a",
+    "ffes_novolak_1.npz": "49b6496585ee2fee1e46a5fc182bdc37cfb7dfe79ec4e5636a438abd738d1d3e",
+    "ffes_novolak_2.npz": "d19376d08ff931ded2958d338a3fba1480400261603fd57bcc5d0bae2d7bc8e5",
+    "ffes_novolak_cb15_1.npz": "80d135417026804e85fb374327955b93ffcfea88fa733bb9d8507f541899a780",
+    "ffes_novolak_cb15_2.npz": "258f089af53c52b4ded7b8c43750f2a395a65e15ffd81c6601bfa3afe07f6343",
+    "cb_reference_1.npz": "d5f8d0db9c42529c7ae9ec51786e856c40d404877a5c353c92a21b22c144e5dd",
+    "cb_reference_2.npz": "2995ac7bb8915a19ff33adae98001b703f2ceaddd4a9f5efe62d7099da0721f6"
+  },
+  "original_results_json_sha256": "c709f0ca890aed401de405367070aac49d716ddda4b8245794aa6e36eb4e1e29",
+  "original_metadata_versions": {
+    "python": "3.11.4",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1"
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "nfes_ca_1",
+    "group": "nfes_ca",
+    "material": "NFES: carbonized CA",
+    "filename": "CA-joao-1.txt",
+    "spectrum": 1,
+    "source": "data/nfes_ca/CA-joao-1.txt"
+  },
+  {
+    "id": "nfes_ca_2",
+    "group": "nfes_ca",
+    "material": "NFES: carbonized CA",
+    "filename": "CA-joao-2.txt",
+    "spectrum": 2,
+    "source": "data/nfes_ca/CA-joao-2.txt"
+  },
+  {
+    "id": "ffes_ca_1",
+    "group": "ffes_ca",
+    "material": "FFES: carbonized CA",
+    "filename": "CA-1.txt",
+    "spectrum": 1,
+    "source": "data/ffes_ca/CA-1.txt"
+  },
+  {
+    "id": "ffes_ca_2",
+    "group": "ffes_ca",
+    "material": "FFES: carbonized CA",
+    "filename": "CA-2.txt",
+    "spectrum": 2,
+    "source": "data/ffes_ca/CA-2.txt"
+  },
+  {
+    "id": "ffes_ca_cb10_1",
+    "group": "ffes_ca_cb10",
+    "material": "FFES: CA + 10% CB",
+    "filename": "15CA-10CB-2.txt",
+    "spectrum": 1,
+    "source": "data/ffes_ca_cb10/15CA-10CB-2.txt"
+  },
+  {
+    "id": "ffes_ca_cb20_1",
+    "group": "ffes_ca_cb20",
+    "material": "FFES: CA + 20% CB",
+    "filename": "15CA-20CB-1.txt",
+    "spectrum": 1,
+    "source": "data/ffes_ca_cb20/15CA-20CB-1.txt"
+  },
+  {
+    "id": "ffes_ca_cb20_2",
+    "group": "ffes_ca_cb20",
+    "material": "FFES: CA + 20% CB",
+    "filename": "15CA-20CB-2.txt",
+    "spectrum": 2,
+    "source": "data/ffes_ca_cb20/15CA-20CB-2.txt"
+  },
+  {
+    "id": "ffes_ca_graphite_1",
+    "group": "ffes_ca_graphite",
+    "material": "FFES: CA + 0.2% graphite",
+    "filename": "carbonized CA-0.2graphite-1.txt",
+    "spectrum": 1,
+    "source": "data/ffes_ca_graphite/carbonized CA-0.2graphite-1.txt"
+  },
+  {
+    "id": "ffes_ca_graphite_2",
+    "group": "ffes_ca_graphite",
+    "material": "FFES: CA + 0.2% graphite",
+    "filename": "carbonized CA-0.2graphite-2.txt",
+    "spectrum": 2,
+    "source": "data/ffes_ca_graphite/carbonized CA-0.2graphite-2.txt"
+  },
+  {
+    "id": "ffes_novolak_1",
+    "group": "ffes_novolak",
+    "material": "FFES: carbonized Novolak",
+    "filename": "Novolac-1.txt",
+    "spectrum": 1,
+    "source": "data/ffes_novolak/Novolac-1.txt"
+  },
+  {
+    "id": "ffes_novolak_2",
+    "group": "ffes_novolak",
+    "material": "FFES: carbonized Novolak",
+    "filename": "Novolac-2.txt",
+    "spectrum": 2,
+    "source": "data/ffes_novolak/Novolac-2.txt"
+  },
+  {
+    "id": "ffes_novolak_cb15_1",
+    "group": "ffes_novolak_cb15",
+    "material": "FFES: Novolak + 15% CB",
+    "filename": "Novolac-CB15-1.txt",
+    "spectrum": 1,
+    "source": "data/ffes_novolak_cb15/Novolac-CB15-1.txt"
+  },
+  {
+    "id": "ffes_novolak_cb15_2",
+    "group": "ffes_novolak_cb15",
+    "material": "FFES: Novolak + 15% CB",
+    "filename": "Novolac-CB15-2.txt",
+    "spectrum": 2,
+    "source": "data/ffes_novolak_cb15/Novolac-CB15-2.txt"
+  },
+  {
+    "id": "cb_reference_1",
+    "group": "cb_reference",
+    "material": "Carbon black reference",
+    "filename": "CB-1.txt",
+    "spectrum": 1,
+    "source": "data/cb_reference/CB-1.txt"
+  },
+  {
+    "id": "cb_reference_2",
+    "group": "cb_reference",
+    "material": "Carbon black reference",
+    "filename": "CB-2.txt",
+    "spectrum": 2,
+    "source": "data/cb_reference/CB-2.txt"
+  }
+]

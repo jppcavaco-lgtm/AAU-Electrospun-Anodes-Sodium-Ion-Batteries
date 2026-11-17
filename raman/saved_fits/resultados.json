@@ -1,0 +1,1389 @@
+{
+  "settings": {
+    "baseline_windows": [
+      [
+        700,
+        900
+      ],
+      [
+        1750,
+        1800
+      ]
+    ],
+    "fit_window": [
+      1000,
+      1800
+    ],
+    "smooth_before_fit": false,
+    "multistart": 16,
+    "random_seed": 20261029,
+    "peak_detection_savgol": {
+      "window": 11,
+      "order": 3
+    },
+    "centre_bounds": [
+      [
+        1100,
+        1270
+      ],
+      [
+        1300,
+        1400
+      ],
+      [
+        1450,
+        1550
+      ],
+      [
+        1550,
+        1605
+      ],
+      [
+        1605,
+        1655
+      ]
+    ],
+    "fwhm_bounds": [
+      [
+        40,
+        450
+      ],
+      [
+        40,
+        350
+      ],
+      [
+        60,
+        400
+      ],
+      [
+        15,
+        180
+      ],
+      [
+        10,
+        180
+      ]
+    ]
+  },
+  "python": "3.11.4",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "matplotlib": "3.11.1",
+  "results": [
+    {
+      "id": "nfes_ca_1",
+      "group": "nfes_ca",
+      "material": "NFES: carbonized CA",
+      "source": "data/nfes_ca/CA-joao-1.txt",
+      "filename": "CA-joao-1.txt",
+      "spectrum": 1,
+      "source_sha256": "a4d3917c7a2496fc4f51d56e35a81ca6c80206d95a869a307f33bcf64069c160",
+      "baseline_slope": 0.49533156519350796,
+      "baseline_intercept": 763.7971388270184,
+      "observed_D_cm1": 1334.71,
+      "observed_G_cm1": 1591.92,
+      "height_ratio": 1.8107571452012452,
+      "area_ratio": 5.1033441694038295,
+      "d3_area_fraction": 0.08866312400918087,
+      "height_ratio_se": 0.20592032872018176,
+      "area_ratio_se": 0.9004428028761717,
+      "d3_area_fraction_se": 0.010559254534910975,
+      "rmse": 69.61342642550291,
+      "r_squared": 0.9988180712581574,
+      "jacobian_condition": 29453.26864469117,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        5.103098177067665,
+        5.103471550836709
+      ],
+      "warnings": [],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1166.915742245269,
+          "centre_se": 3.6406745543930814,
+          "height": 631.8478505579149,
+          "height_se": 23.53869496280477,
+          "fwhm_cm1": 207.52467330241785,
+          "fwhm_se": 12.492154753119914,
+          "area": 205969.12702886615
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1337.44190340723,
+          "centre_se": 0.2438443342601058,
+          "height": 6610.058818303147,
+          "height_se": 20.532964722090487,
+          "fwhm_cm1": 157.7380937180981,
+          "fwhm_se": 1.2336212775424575,
+          "area": 1637803.4780258387
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1533.0568497164713,
+          "centre_se": 4.910809505299162,
+          "height": 1623.924951051022,
+          "height_se": 106.49363447373969,
+          "fwhm_cm1": 132.14729677464948,
+          "fwhm_se": 6.754396271848171,
+          "area": 228431.7402683215
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1584.9635548371868,
+          "centre_se": 1.4771170936132167,
+          "height": 3650.4391744750033,
+          "height_se": 414.32683878648083,
+          "fwhm_cm1": 55.968277033495944,
+          "fwhm_se": 3.67872597011738,
+          "area": 320927.4984518958
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1608.649774740939,
+          "centre_se": 1.2390566594510402,
+          "height": 2582.651982495734,
+          "height_se": 378.8622510555653,
+          "fwhm_cm1": 45.175508687735665,
+          "fwhm_se": 2.859779415452516,
+          "area": 183268.91833524065
+        }
+      ]
+    },
+    {
+      "id": "nfes_ca_2",
+      "group": "nfes_ca",
+      "material": "NFES: carbonized CA",
+      "source": "data/nfes_ca/CA-joao-2.txt",
+      "filename": "CA-joao-2.txt",
+      "spectrum": 2,
+      "source_sha256": "aa50db79b89e02328c37574dc89dd1428a1a4b413d527a43434c5674741fcdcb",
+      "baseline_slope": 0.9200606159919275,
+      "baseline_intercept": 1063.0852121872451,
+      "observed_D_cm1": 1336.39,
+      "observed_G_cm1": 1593.54,
+      "height_ratio": 1.829298022430154,
+      "area_ratio": 4.95155870270899,
+      "d3_area_fraction": 0.08336480941521318,
+      "height_ratio_se": 0.33126806594097113,
+      "area_ratio_se": 1.2756118570754587,
+      "d3_area_fraction_se": 0.012435712944905728,
+      "rmse": 79.17382786939108,
+      "r_squared": 0.9986451076814199,
+      "jacobian_condition": 44274.30191968997,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        4.951369330278231,
+        4.951732300034084
+      ],
+      "warnings": [],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1165.001982056665,
+          "centre_se": 6.1491339362695765,
+          "height": 600.2637249086628,
+          "height_se": 33.066527489025475,
+          "fwhm_cm1": 246.41873832973135,
+          "fwhm_se": 20.013257712525817,
+          "area": 232346.2703757989
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1337.2178168748146,
+          "centre_se": 0.2972782744782551,
+          "height": 6888.734430045938,
+          "height_se": 31.62422622952045,
+          "fwhm_cm1": 162.4625798559891,
+          "fwhm_se": 1.5798793621449505,
+          "area": 1757974.8792373997
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1529.8674171065577,
+          "centre_se": 5.931276895039006,
+          "height": 1654.2963416084233,
+          "height_se": 134.06272290544604,
+          "fwhm_cm1": 132.73999970897285,
+          "fwhm_se": 8.417996626432828,
+          "area": 233747.69224360614
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1584.099315174163,
+          "centre_se": 2.3094607377841845,
+          "height": 3765.7802859779576,
+          "height_se": 680.0843079758133,
+          "fwhm_cm1": 60.01998439135303,
+          "fwhm_se": 4.835034068958642,
+          "area": 355034.64359124214
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1606.8817775632156,
+          "centre_se": 1.7338930690324135,
+          "height": 2916.8104276456993,
+          "height_se": 632.0580977151741,
+          "fwhm_cm1": 49.066723237663695,
+          "fwhm_se": 3.669785808370215,
+          "area": 224809.74704534805
+        }
+      ]
+    },
+    {
+      "id": "ffes_ca_1",
+      "group": "ffes_ca",
+      "material": "FFES: carbonized CA",
+      "source": "data/ffes_ca/CA-1.txt",
+      "filename": "CA-1.txt",
+      "spectrum": 1,
+      "source_sha256": "d093ee9526f73613d92614da5a35fd1896dd24e72057afb05c3646d46c4a99c4",
+      "baseline_slope": 0.6347497304334948,
+      "baseline_intercept": 806.5925097735806,
+      "observed_D_cm1": 1343.24,
+      "observed_G_cm1": 1592.06,
+      "height_ratio": 2.4874110514630328,
+      "area_ratio": 6.2024831924498285,
+      "d3_area_fraction": 0.09123034135171477,
+      "height_ratio_se": 1.9797321156432004,
+      "area_ratio_se": 6.5408502685690735,
+      "d3_area_fraction_se": 0.04647833614173055,
+      "rmse": 65.14839882112489,
+      "r_squared": 0.9929281967358825,
+      "jacobian_condition": 163151.02877445845,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        6.201817005776524,
+        6.202997563908583
+      ],
+      "warnings": [
+        "bound_or_weak_component:D2_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1146.0285484251017,
+          "centre_se": 46.900775854186676,
+          "height": 178.3693668809115,
+          "height_se": 61.35716559222267,
+          "fwhm_cm1": 393.2901168366733,
+          "fwhm_se": 165.89202578151946,
+          "area": 110192.79039949818
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1344.7072221390197,
+          "centre_se": 1.0187643182728718,
+          "height": 2382.3643667231063,
+          "height_se": 65.04350032934364,
+          "fwhm_cm1": 197.75764241816006,
+          "fwhm_se": 6.8026651481298686,
+          "area": 740050.4681029065
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1535.596653324685,
+          "centre_se": 19.28045519167875,
+          "height": 671.8741950541324,
+          "height_se": 219.0309006820137,
+          "fwhm_cm1": 148.98305531028757,
+          "fwhm_se": 21.67620294068425,
+          "area": 106550.88171704029
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1579.5973894779386,
+          "centre_se": 12.35454766656931,
+          "height": 957.7686668722724,
+          "height_se": 757.7116611744856,
+          "fwhm_cm1": 79.30767887625919,
+          "fwhm_se": 22.712968209716752,
+          "area": 119315.19121305425
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1605.0000000284501,
+          "centre_se": 5.691880227250991,
+          "height": 973.384279875778,
+          "height_se": 714.8476629942003,
+          "fwhm_cm1": 60.05485533384005,
+          "fwhm_se": 16.40324157822797,
+          "area": 91823.18025526457
+        }
+      ]
+    },
+    {
+      "id": "ffes_ca_2",
+      "group": "ffes_ca",
+      "material": "FFES: carbonized CA",
+      "source": "data/ffes_ca/CA-2.txt",
+      "filename": "CA-2.txt",
+      "spectrum": 2,
+      "source_sha256": "2502f492e419fc966168e5fb653bd57904dcd26d9cc2944ccdb9d43704d47e4a",
+      "baseline_slope": 0.5971555845274918,
+      "baseline_intercept": 1038.7030026461023,
+      "observed_D_cm1": 1343.24,
+      "observed_G_cm1": 1587.2,
+      "height_ratio": 2.679730130670872,
+      "area_ratio": 7.722852050636046,
+      "d3_area_fraction": 0.10863488059655854,
+      "height_ratio_se": 0.9724957259509076,
+      "area_ratio_se": 4.023144423810439,
+      "d3_area_fraction_se": 0.01862757959242096,
+      "rmse": 67.95746072705337,
+      "r_squared": 0.9976922735897188,
+      "jacobian_condition": 158046.10981688031,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        7.722521850697652,
+        7.72395865816001
+      ],
+      "warnings": [
+        "bound_or_weak_component:D2_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1138.8181723560563,
+          "centre_se": 24.62105796128262,
+          "height": 414.08063646287815,
+          "height_se": 61.19289695137748,
+          "fwhm_cm1": 424.7961210317239,
+          "fwhm_se": 91.08242317916438,
+          "area": 276302.8353794426
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1344.3261170901985,
+          "centre_se": 0.6190520543905267,
+          "height": 4272.5478834037485,
+          "height_se": 78.1216479553909,
+          "fwhm_cm1": 201.8323327168715,
+          "fwhm_se": 4.318470975242898,
+          "area": 1354557.8434437946
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1537.9825434194763,
+          "centre_se": 7.00651583694501,
+          "height": 1493.2972675829938,
+          "height_se": 170.1869601784739,
+          "fwhm_cm1": 151.82634199283774,
+          "fwhm_se": 8.087303578188276,
+          "area": 241337.9443051794
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1577.3750543029187,
+          "centre_se": 5.185853785533063,
+          "height": 1594.3948364435166,
+          "height_se": 569.615954605049,
+          "fwhm_cm1": 70.03321826946622,
+          "fwhm_se": 11.488842870070505,
+          "area": 175396.06282270222
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1605.0000000000014,
+          "centre_se": 3.2311656871531036,
+          "height": 1800.0648564605563,
+          "height_se": 580.3070099764285,
+          "fwhm_cm1": 61.522298159397764,
+          "fwhm_se": 8.400300941126941,
+          "area": 173956.4676000618
+        }
+      ]
+    },
+    {
+      "id": "ffes_ca_cb10_1",
+      "group": "ffes_ca_cb10",
+      "material": "FFES: CA + 10% CB",
+      "source": "data/ffes_ca_cb10/15CA-10CB-2.txt",
+      "filename": "15CA-10CB-2.txt",
+      "spectrum": 1,
+      "source_sha256": "dc84bc7209b0d920023acef58db00d74e135eb3827065e55078326749f4f8dce",
+      "baseline_slope": 0.5620289341605693,
+      "baseline_intercept": 634.3391059907018,
+      "observed_D_cm1": 1346.59,
+      "observed_G_cm1": 1587.2,
+      "height_ratio": 1.0710863258489896,
+      "area_ratio": 1.8020017551899088,
+      "d3_area_fraction": 0.09607089771062782,
+      "height_ratio_se": 0.13728902116562305,
+      "area_ratio_se": 0.3742360786529666,
+      "d3_area_fraction_se": 0.04813153979896789,
+      "rmse": 62.09946682788267,
+      "r_squared": 0.9892005196411975,
+      "jacobian_condition": 67452.51000796811,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        1.8019293186434866,
+        1.8020637288958423
+      ],
+      "warnings": [],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1188.8179811689881,
+          "centre_se": 27.625870983434368,
+          "height": 242.16948931899415,
+          "height_se": 38.55923961513551,
+          "fwhm_cm1": 355.4756278589747,
+          "fwhm_se": 78.92544179107423,
+          "area": 135222.5535562716
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1347.4576512669971,
+          "centre_se": 1.1251602377574483,
+          "height": 1766.2761848052505,
+          "height_se": 54.707798517535466,
+          "fwhm_cm1": 136.75358941470876,
+          "fwhm_se": 5.342080425135339,
+          "area": 379417.3832702901
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1516.5064869675,
+          "centre_se": 20.18770407773579,
+          "height": 461.88056465094877,
+          "height_se": 99.31691298329638,
+          "fwhm_cm1": 157.34022266200722,
+          "fwhm_se": 37.8596117665807,
+          "area": 77357.36332075883
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1588.8495024973477,
+          "centre_se": 0.8361420873595443,
+          "height": 1649.05119426786,
+          "height_se": 225.56584360104182,
+          "fwhm_cm1": 81.28454881411868,
+          "fwhm_se": 7.259625768588484,
+          "area": 210553.28174766633
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1618.0690875141825,
+          "centre_se": 1.9874445951931625,
+          "height": 125.31312575608715,
+          "height_se": 43.70125990204842,
+          "fwhm_cm1": 13.516583597089369,
+          "fwhm_se": 8.962578458307622,
+          "area": 2660.6232065263744
+        }
+      ]
+    },
+    {
+      "id": "ffes_ca_cb20_1",
+      "group": "ffes_ca_cb20",
+      "material": "FFES: CA + 20% CB",
+      "source": "data/ffes_ca_cb20/15CA-20CB-1.txt",
+      "filename": "15CA-20CB-1.txt",
+      "spectrum": 1,
+      "source_sha256": "b879b9b824762ce7eae6339eb7189e9793749f174fde34232f87b6e593479f38",
+      "baseline_slope": 0.5763020816243591,
+      "baseline_intercept": 585.6412445170454,
+      "observed_D_cm1": 1358.3,
+      "observed_G_cm1": 1587.2,
+      "height_ratio": 1.5498565290822877,
+      "area_ratio": 3.57504025335279,
+      "d3_area_fraction": 0.11054596587847315,
+      "height_ratio_se": 3.690690692821626,
+      "area_ratio_se": 11.029330464286847,
+      "d3_area_fraction_se": 0.10371862817203796,
+      "rmse": 57.13019541619135,
+      "r_squared": 0.9331583933728105,
+      "jacobian_condition": 176653.55009662738,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        3.574518260588556,
+        3.575862065682745
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_FWHM,D3_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1259.0723307273988,
+          "centre_se": 14.307783627953086,
+          "height": 28.414935213428112,
+          "height_se": 24.41746821242794,
+          "fwhm_cm1": 40.000000066311635,
+          "fwhm_se": 67.28344100855192,
+          "area": 1785.3630373344722
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1354.039728919525,
+          "centre_se": 2.4130605698243914,
+          "height": 656.4038210528918,
+          "height_se": 14.170644393112035,
+          "fwhm_cm1": 175.45011825676508,
+          "fwhm_se": 11.6145825735455,
+          "area": 180902.53087745118
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1549.9999999999998,
+          "centre_se": 27.721692455898506,
+          "height": 237.63753526682052,
+          "height_se": 149.30226598966374,
+          "fwhm_cm1": 116.55356762489833,
+          "fwhm_se": 37.64217885379193,
+          "area": 29483.077971180588
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1598.317283225686,
+          "centre_se": 24.421460272688808,
+          "height": 423.5255384842405,
+          "height_se": 1004.1222942678405,
+          "fwhm_cm1": 76.06138449867495,
+          "fwhm_se": 54.711847147914874,
+          "area": 50601.53678208095
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1625.5318393640264,
+          "centre_se": 346.1021970612788,
+          "height": 32.05594166017479,
+          "height_se": 856.4447404985187,
+          "fwhm_cm1": 78.08283510544143,
+          "fwhm_se": 473.52703820046105,
+          "area": 3931.7327476216788
+        }
+      ]
+    },
+    {
+      "id": "ffes_ca_cb20_2",
+      "group": "ffes_ca_cb20",
+      "material": "FFES: CA + 20% CB",
+      "source": "data/ffes_ca_cb20/15CA-20CB-2.txt",
+      "filename": "15CA-20CB-2.txt",
+      "spectrum": 2,
+      "source_sha256": "8e87773c12eedddc17df8caca768ca09d15229ce089b5768b2d12f39c8d3a6ee",
+      "baseline_slope": 0.635474709858753,
+      "baseline_intercept": 727.880516991203,
+      "observed_D_cm1": 1348.26,
+      "observed_G_cm1": 1588.82,
+      "height_ratio": 1.0793868865824212,
+      "area_ratio": 2.048016253265011,
+      "d3_area_fraction": 0.09149705581515213,
+      "height_ratio_se": 0.15252906205041614,
+      "area_ratio_se": 0.436172257729845,
+      "d3_area_fraction_se": 0.04205878199621299,
+      "rmse": 63.50093771528086,
+      "r_squared": 0.9944118964820188,
+      "jacobian_condition": 180881.37186909575,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        2.0479644193286255,
+        2.0480888990911597
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_FWHM"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1250.764190793129,
+          "centre_se": 70.49439470885994,
+          "height": 515.668196671715,
+          "height_se": 233.418568186857,
+          "fwhm_cm1": 449.9999999998646,
+          "fwhm_se": 140.5751938963991,
+          "area": 364504.3691294855
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1347.4698677159834,
+          "centre_se": 0.7799534509749939,
+          "height": 2345.0120077068223,
+          "height_se": 231.9555761879636,
+          "fwhm_cm1": 149.10146281190495,
+          "fwhm_se": 7.673077901117793,
+          "area": 549220.64289685
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1525.0643984017393,
+          "centre_se": 12.213940581382671,
+          "height": 708.1165560071958,
+          "height_se": 138.70915826855676,
+          "fwhm_cm1": 158.38197586400463,
+          "fwhm_se": 24.182490400942573,
+          "area": 119383.06241974278
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1591.9387859017984,
+          "centre_se": 0.5096712843454476,
+          "height": 2172.5407607383963,
+          "height_se": 197.12467258408202,
+          "fwhm_cm1": 78.58246411514271,
+          "fwhm_se": 5.1376147276811395,
+          "area": 268172.01378224685
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1636.3968342174155,
+          "centre_se": 2.815919610367305,
+          "height": 116.73610164236078,
+          "height_se": 37.83048965575849,
+          "fwhm_cm1": 19.058973161792174,
+          "fwhm_se": 12.13382330578715,
+          "area": 3494.8179820738706
+        }
+      ]
+    },
+    {
+      "id": "ffes_ca_graphite_1",
+      "group": "ffes_ca_graphite",
+      "material": "FFES: CA + 0.2% graphite",
+      "source": "data/ffes_ca_graphite/carbonized CA-0.2graphite-1.txt",
+      "filename": "carbonized CA-0.2graphite-1.txt",
+      "spectrum": 1,
+      "source_sha256": "948cfc483afffb1d0f5b6dfea042569d95d2fe770bad612dfad9503650dbf70c",
+      "baseline_slope": 0.7167144444866004,
+      "baseline_intercept": 754.4114263741458,
+      "observed_D_cm1": 1338.08,
+      "observed_G_cm1": 1587.08,
+      "height_ratio": 1.7288424965554674,
+      "area_ratio": 4.567335056835634,
+      "d3_area_fraction": 0.11579808352147007,
+      "height_ratio_se": 1.2355868399307048,
+      "area_ratio_se": 4.277360869376461,
+      "d3_area_fraction_se": 0.0580397224418354,
+      "rmse": 62.29640399451161,
+      "r_squared": 0.9905997695211539,
+      "jacobian_condition": 324219.71771466994,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        4.566696859486432,
+        4.568147178686258
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_FWHM,D2_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1135.270033645575,
+          "centre_se": 87.65967793980695,
+          "height": 103.60956046586232,
+          "height_se": 57.40749177574111,
+          "fwhm_cm1": 449.99999960906894,
+          "fwhm_se": 373.9021589153304,
+          "area": 73237.28258665076
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1342.4450851613965,
+          "centre_se": 0.9247378275603436,
+          "height": 1941.4821503028031,
+          "height_se": 63.98599456852212,
+          "fwhm_cm1": 186.27349095010572,
+          "fwhm_se": 6.516303570390123,
+          "area": 568073.2415979814
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1542.5475030834514,
+          "centre_se": 16.911316848942935,
+          "height": 684.974808335778,
+          "height_se": 206.77952679252766,
+          "fwhm_cm1": 142.25873501282757,
+          "fwhm_se": 18.346080539430574,
+          "area": 103725.55141135253
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1586.1002329093424,
+          "centre_se": 10.019254876476303,
+          "height": 1122.995388053566,
+          "height_se": 805.7372235456926,
+          "fwhm_cm1": 70.50884665321638,
+          "fwhm_se": 17.946704719306176,
+          "area": 124377.39612463576
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1605.0000000000002,
+          "centre_se": 6.880275524016514,
+          "height": 388.6224466754965,
+          "height_se": 654.82213793954,
+          "fwhm_cm1": 43.13481032880985,
+          "fwhm_se": 26.35041392421298,
+          "area": 26331.503127091994
+        }
+      ]
+    },
+    {
+      "id": "ffes_ca_graphite_2",
+      "group": "ffes_ca_graphite",
+      "material": "FFES: CA + 0.2% graphite",
+      "source": "data/ffes_ca_graphite/carbonized CA-0.2graphite-2.txt",
+      "filename": "carbonized CA-0.2graphite-2.txt",
+      "spectrum": 2,
+      "source_sha256": "d8bd6e975e113127e210d14b032c34b4fccedad2c30ba7df1fa9621c29e653eb",
+      "baseline_slope": 0.72000468641183,
+      "baseline_intercept": 987.8434436510264,
+      "observed_D_cm1": 1343.11,
+      "observed_G_cm1": 1585.45,
+      "height_ratio": 1.6441824187393355,
+      "area_ratio": 4.021339767114277,
+      "d3_area_fraction": 0.08193208612168522,
+      "height_ratio_se": 0.7009425900605952,
+      "area_ratio_se": 1.9238274252157157,
+      "d3_area_fraction_se": 0.02348481582881923,
+      "rmse": 74.11723634206233,
+      "r_squared": 0.9969623409598456,
+      "jacobian_condition": 173347.35701582528,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        4.020833124479763,
+        4.021974018194301
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_FWHM"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1188.9648232575266,
+          "centre_se": 45.467272092619055,
+          "height": 469.8712338555067,
+          "height_se": 114.52785603434977,
+          "fwhm_cm1": 449.99999999999994,
+          "fwhm_se": 107.58546983408158,
+          "area": 332132.4036930671
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1345.2486001429304,
+          "centre_se": 0.6061476694471514,
+          "height": 4065.28828323505,
+          "height_se": 143.98952451652835,
+          "fwhm_cm1": 181.4491681976823,
+          "fwhm_se": 5.084346302064982,
+          "area": 1158687.1936658479
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1534.6598933448627,
+          "centre_se": 10.539812083978303,
+          "height": 1141.9979944833772,
+          "height_se": 175.33012323940912,
+          "fwhm_cm1": 136.9007343862881,
+          "fwhm_se": 14.97288910435958,
+          "area": 166419.16140356433
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1585.836217543753,
+          "centre_se": 6.12966366135064,
+          "height": 2472.528739452207,
+          "height_se": 1055.3401683437853,
+          "fwhm_cm1": 74.1880938997582,
+          "fwhm_se": 6.324882753525955,
+          "area": 288134.6170103215
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1605.820064309476,
+          "centre_se": 6.998368379629695,
+          "height": 996.368090100858,
+          "height_se": 1118.6122233545477,
+          "fwhm_cm1": 54.8280180110234,
+          "fwhm_se": 20.206846200678953,
+          "area": 85810.8559627274
+        }
+      ]
+    },
+    {
+      "id": "ffes_novolak_1",
+      "group": "ffes_novolak",
+      "material": "FFES: carbonized Novolak",
+      "source": "data/ffes_novolak/Novolac-1.txt",
+      "filename": "Novolac-1.txt",
+      "spectrum": 1,
+      "source_sha256": "5764e871a7528c28593e5b09387fd43aab930f3f02eb267af63bc0755a5957ce",
+      "baseline_slope": 0.6268865335195576,
+      "baseline_intercept": 804.2331885917779,
+      "observed_D_cm1": 1346.59,
+      "observed_G_cm1": 1587.2,
+      "height_ratio": 1.4117178856745554,
+      "area_ratio": 3.5817202917863296,
+      "d3_area_fraction": 0.07006182298022526,
+      "height_ratio_se": 0.2372261322752428,
+      "area_ratio_se": 0.8549423803156535,
+      "d3_area_fraction_se": 0.03488771105921357,
+      "rmse": 64.74851049388909,
+      "r_squared": 0.9891505703729905,
+      "jacobian_condition": 368877.5625495349,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        3.581466499480266,
+        3.8842041302436487
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_FWHM"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1111.3305074332163,
+          "centre_se": 85.12133554180004,
+          "height": 88.25248389231287,
+          "height_se": 41.21699422960578,
+          "fwhm_cm1": 449.99999999999994,
+          "fwhm_se": 462.5360556550709,
+          "area": 62382.00488785686
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1344.6191496102858,
+          "centre_se": 1.0039844984876742,
+          "height": 1933.9368158034738,
+          "height_se": 58.68883669857848,
+          "fwhm_cm1": 200.48649390190843,
+          "fwhm_se": 7.221919160575608,
+          "area": 609042.0506204241
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1540.0436333742616,
+          "centre_se": 17.38078211957582,
+          "height": 469.757160969508,
+          "height_se": 133.1366091823038,
+          "fwhm_cm1": 128.40388336842128,
+          "fwhm_se": 23.46590209443329,
+          "area": 64207.20688463753
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1590.3584061509823,
+          "centre_se": 1.97214235982536,
+          "height": 1369.9173435628668,
+          "height_se": 237.47927953247085,
+          "fwhm_cm1": 79.02079063140624,
+          "fwhm_se": 6.588244046095408,
+          "area": 170041.7679228306
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1613.1758957962677,
+          "centre_se": 1.5632995138778727,
+          "height": 288.82032504638624,
+          "height_se": 75.47053586863315,
+          "fwhm_cm1": 23.724759093331002,
+          "fwhm_se": 8.65589272342665,
+          "area": 10763.399018380853
+        }
+      ]
+    },
+    {
+      "id": "ffes_novolak_2",
+      "group": "ffes_novolak",
+      "material": "FFES: carbonized Novolak",
+      "source": "data/ffes_novolak/Novolac-2.txt",
+      "filename": "Novolac-2.txt",
+      "spectrum": 2,
+      "source_sha256": "8aaaf773bc8edb007615b9b2a7af0debf1cae3671603f223eef88702c6486541",
+      "baseline_slope": 0.5157744116206099,
+      "baseline_intercept": 631.2571454796358,
+      "observed_D_cm1": 1353.29,
+      "observed_G_cm1": 1596.92,
+      "height_ratio": 2.507841789067874,
+      "area_ratio": 8.270760632702668,
+      "d3_area_fraction": 0.0963837681537795,
+      "height_ratio_se": 0.8591467854034066,
+      "area_ratio_se": 4.3737374666270314,
+      "d3_area_fraction_se": 0.027078621809403337,
+      "rmse": 55.67088917950775,
+      "r_squared": 0.9953005047990428,
+      "jacobian_condition": 383570.33548262075,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        8.26931681128377,
+        8.271714628868105
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_FWHM,D3_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1144.9547858082358,
+          "centre_se": 86.9554029791098,
+          "height": 108.10164724061326,
+          "height_se": 50.426899064575714,
+          "fwhm_cm1": 449.99999999579194,
+          "fwhm_se": 321.50837549424193,
+          "area": 76412.5516820003
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1345.740137557775,
+          "centre_se": 0.7060436042918397,
+          "height": 2547.7945980492696,
+          "height_se": 65.98030587496977,
+          "fwhm_cm1": 197.87999391494722,
+          "fwhm_se": 4.908562531700697,
+          "area": 791928.8740963368
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1549.9999130597746,
+          "centre_se": 9.863587044952203,
+          "height": 820.7747419806485,
+          "height_se": 142.85541298517708,
+          "fwhm_cm1": 127.64013003600691,
+          "fwhm_se": 11.419538391517925,
+          "area": 111517.60439152656
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1585.3939454755293,
+          "centre_se": 4.576976096990103,
+          "height": 1015.9311520988114,
+          "height_se": 343.04170639225214,
+          "fwhm_cm1": 60.00073511959917,
+          "fwhm_se": 11.449159668237947,
+          "area": 95750.42843883575
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1611.4999464771017,
+          "centre_se": 3.21979735080071,
+          "height": 997.3437228762954,
+          "height_se": 355.69848768845856,
+          "fwhm_cm1": 51.96332353428893,
+          "fwhm_se": 9.180630456012011,
+          "area": 81406.98230904058
+        }
+      ]
+    },
+    {
+      "id": "ffes_novolak_cb15_1",
+      "group": "ffes_novolak_cb15",
+      "material": "FFES: Novolak + 15% CB",
+      "source": "data/ffes_novolak_cb15/Novolac-CB15-1.txt",
+      "filename": "Novolac-CB15-1.txt",
+      "spectrum": 1,
+      "source_sha256": "9b4acf50a26662d3bfdfbdbd2aa5363d97835c84685c546c68e716b00f71e228",
+      "baseline_slope": 0.46960616914779846,
+      "baseline_intercept": 595.7805941259684,
+      "observed_D_cm1": 1351.49,
+      "observed_G_cm1": 1600.04,
+      "height_ratio": 2.436361494067141,
+      "area_ratio": 7.930965811282418,
+      "d3_area_fraction": 0.10312889772952895,
+      "height_ratio_se": 0.8189193781900953,
+      "area_ratio_se": 4.418606609024243,
+      "d3_area_fraction_se": 0.02947881292840153,
+      "rmse": 59.52517038830689,
+      "r_squared": 0.9932021438124684,
+      "jacobian_condition": 58999.881337398576,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        7.929711237766687,
+        7.931883677965627
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1269.9999999889296,
+          "centre_se": 47.09618772662209,
+          "height": 339.33683319392765,
+          "height_se": 274.0946038263388,
+          "fwhm_cm1": 251.3660696185195,
+          "fwhm_se": 47.65478732748917,
+          "area": 133985.4175743417
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1351.5502178161241,
+          "centre_se": 3.629343415517992,
+          "height": 2018.4781853284935,
+          "height_se": 283.7977580059567,
+          "fwhm_cm1": 181.39055119546995,
+          "fwhm_se": 12.352376643978882,
+          "area": 575120.1682774061
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1539.8111980634112,
+          "centre_se": 10.693884113297798,
+          "height": 715.4995504650981,
+          "height_se": 108.65683322844086,
+          "fwhm_cm1": 133.13679901774236,
+          "fwhm_se": 16.30912780017119,
+          "area": 101400.40427117462
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1582.369816821024,
+          "centre_se": 3.3071935177940723,
+          "height": 828.4805806707058,
+          "height_se": 221.58809247888215,
+          "fwhm_cm1": 55.72246367416857,
+          "fwhm_se": 11.117760343460557,
+          "area": 72515.77953586091
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1612.3174204554684,
+          "centre_se": 2.1233055841183495,
+          "height": 1183.6277876102133,
+          "height_se": 216.18705232977814,
+          "fwhm_cm1": 53.90256942746432,
+          "fwhm_se": 5.6068135857829775,
+          "area": 100217.71513734473
+        }
+      ]
+    },
+    {
+      "id": "ffes_novolak_cb15_2",
+      "group": "ffes_novolak_cb15",
+      "material": "FFES: Novolak + 15% CB",
+      "source": "data/ffes_novolak_cb15/Novolac-CB15-2.txt",
+      "filename": "Novolac-CB15-2.txt",
+      "spectrum": 2,
+      "source_sha256": "27a707bf07f1df866651963a7142a51d07f66efd300ff269e9a2f4bac40570c4",
+      "baseline_slope": 0.9230328871605782,
+      "baseline_intercept": 854.2518838302416,
+      "observed_D_cm1": 1353.16,
+      "observed_G_cm1": 1591.94,
+      "height_ratio": 1.8740637276560053,
+      "area_ratio": 6.19803779926925,
+      "d3_area_fraction": 0.1525183759300797,
+      "height_ratio_se": 0.6151959143131029,
+      "area_ratio_se": 3.5334231279745536,
+      "d3_area_fraction_se": 0.0340637662549575,
+      "rmse": 76.93678656371632,
+      "r_squared": 0.98308534857751,
+      "jacobian_condition": 91800.91183834487,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        6.197743897639601,
+        6.217388341603503
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_centre,D3_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1269.9999999989845,
+          "centre_se": 67.47322622208947,
+          "height": 111.82752816299603,
+          "height_se": 250.88515085541178,
+          "fwhm_cm1": 158.39880666989643,
+          "fwhm_se": 128.39494522623613,
+          "area": 27824.06042461905
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1351.6172571217141,
+          "centre_se": 6.033390397896764,
+          "height": 1709.2522136241935,
+          "height_se": 214.6015771377583,
+          "fwhm_cm1": 174.22433886273333,
+          "fwhm_se": 16.52180436654235,
+          "area": 467772.6796967814
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1549.999999999722,
+          "centre_se": 9.749981706001153,
+          "height": 721.3662511356558,
+          "height_se": 94.057866219624,
+          "fwhm_cm1": 143.56917703725568,
+          "fwhm_se": 15.28568169107844,
+          "area": 110242.54771042317
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1588.923849860309,
+          "centre_se": 3.7065860163580586,
+          "height": 912.0566117364906,
+          "height_se": 243.3982956711962,
+          "fwhm_cm1": 52.679174363214166,
+          "fwhm_se": 10.580031092613932,
+          "area": 75471.09179487932
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1617.8026328116441,
+          "centre_se": 6.058180662251278,
+          "height": 515.4557843409834,
+          "height_se": 273.3463925621688,
+          "fwhm_cm1": 51.260593372384335,
+          "fwhm_se": 18.164710224133998,
+          "area": 41504.474899171546
+        }
+      ]
+    },
+    {
+      "id": "cb_reference_1",
+      "group": "cb_reference",
+      "material": "Carbon black reference",
+      "source": "data/cb_reference/CB-1.txt",
+      "filename": "CB-1.txt",
+      "spectrum": 1,
+      "source_sha256": "35b9e371ef8f3aa6fcaab33a3d9c9f335a1f517941e85e73f865704dd4755767",
+      "baseline_slope": 6.264410442135731,
+      "baseline_intercept": -1184.9939077587367,
+      "observed_D_cm1": 1343.24,
+      "observed_G_cm1": 1582.33,
+      "height_ratio": 1.1851235198528738,
+      "area_ratio": 1.9155198136012503,
+      "d3_area_fraction": 0.1071015096310826,
+      "height_ratio_se": 0.46473716526892717,
+      "area_ratio_se": 1.105932354859894,
+      "d3_area_fraction_se": 0.10914928196459758,
+      "rmse": 109.57565872951197,
+      "r_squared": 0.9786208141153482,
+      "jacobian_condition": 41411.84171880748,
+      "successful_starts": 16,
+      "near_optimal_starts": 1,
+      "near_optimal_area_ratio_range": [
+        1.9155198136012497,
+        1.9155198136012497
+      ],
+      "warnings": [
+        "bound_or_weak_component:D4_centre,D4_FWHM,D2_centre,D2_FWHM"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1269.9999999999998,
+          "centre_se": 5.485811202425466,
+          "height": 154.47379463573978,
+          "height_se": 51.2474487633008,
+          "fwhm_cm1": 40.382889851648834,
+          "fwhm_se": 24.750808742410587,
+          "area": 9798.781791746569
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1344.9276986947689,
+          "centre_se": 1.1186847856788331,
+          "height": 2236.7449096991336,
+          "height_se": 34.76377229544234,
+          "fwhm_cm1": 121.18087446431896,
+          "fwhm_se": 4.393960143001452,
+          "area": 425765.45039265876
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1532.865663976961,
+          "centre_se": 33.28388354390781,
+          "height": 684.0228055261687,
+          "height_se": 430.6476009680028,
+          "fwhm_cm1": 118.08158156219655,
+          "fwhm_se": 44.88994564911774,
+          "area": 85977.52775250899
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1582.3391546596758,
+          "centre_se": 1.3510894707548873,
+          "height": 1887.3517167027555,
+          "height_se": 722.9270061875305,
+          "fwhm_cm1": 74.97406367935322,
+          "fwhm_se": 14.627882137120874,
+          "area": 222271.49381044693
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1654.9999999999652,
+          "centre_se": 47.55299237777758,
+          "height": 208.5052400591466,
+          "height_se": 133.34167638409104,
+          "fwhm_cm1": 179.99999999999997,
+          "fwhm_se": 69.06825891603324,
+          "area": 58953.467736431194
+        }
+      ]
+    },
+    {
+      "id": "cb_reference_2",
+      "group": "cb_reference",
+      "material": "Carbon black reference",
+      "source": "data/cb_reference/CB-2.txt",
+      "filename": "CB-2.txt",
+      "spectrum": 2,
+      "source_sha256": "f20e1e4fe054aa72277fcf017739b91f9ee67b9c464141cac93f0d20899cbfdd",
+      "baseline_slope": 2.0353240013364764,
+      "baseline_intercept": 219.52642445894597,
+      "observed_D_cm1": 1334.85,
+      "observed_G_cm1": 1580.71,
+      "height_ratio": 1.228457109778469,
+      "area_ratio": 2.1138126474420584,
+      "d3_area_fraction": 0.10173397530161257,
+      "height_ratio_se": 0.2456429060749192,
+      "area_ratio_se": 0.658062182426455,
+      "d3_area_fraction_se": 0.04353951633479275,
+      "rmse": 71.5198412192195,
+      "r_squared": 0.9949133126821363,
+      "jacobian_condition": 170875.9496961114,
+      "successful_starts": 16,
+      "near_optimal_starts": 16,
+      "near_optimal_area_ratio_range": [
+        2.113781340001451,
+        2.114072875143145
+      ],
+      "warnings": [
+        "bound_or_weak_component:D2_centre"
+      ],
+      "bands": [
+        {
+          "band": "D4",
+          "shape": "Lorentzian",
+          "centre_cm1": 1242.6643024209382,
+          "centre_se": 68.15102530535437,
+          "height": 346.4014900910809,
+          "height_se": 157.1632646620035,
+          "fwhm_cm1": 380.1412218509112,
+          "fwhm_se": 129.12893906815236,
+          "area": 206844.7940353438
+        },
+        {
+          "band": "D1",
+          "shape": "Lorentzian",
+          "centre_cm1": 1342.3062445929702,
+          "centre_se": 0.5862495349986534,
+          "height": 2884.261824415334,
+          "height_se": 181.24162169211746,
+          "fwhm_cm1": 129.04440969457866,
+          "fwhm_se": 5.287072602445369,
+          "area": 584647.0384545014
+        },
+        {
+          "band": "D3",
+          "shape": "Gaussian",
+          "centre_cm1": 1522.5113775507125,
+          "centre_se": 14.759203407289961,
+          "height": 760.1289309810962,
+          "height_se": 177.49380622279293,
+          "fwhm_cm1": 155.6481492946222,
+          "fwhm_se": 20.720995178408838,
+          "area": 125939.92596959005
+        },
+        {
+          "band": "G",
+          "shape": "Lorentzian",
+          "centre_cm1": 1576.73368767841,
+          "centre_se": 2.9505576593569507,
+          "height": 2347.873443408587,
+          "height_se": 429.62692342523394,
+          "fwhm_cm1": 74.99506768412223,
+          "fwhm_se": 8.040830506963825,
+          "area": 276584.13301764824
+        },
+        {
+          "band": "D2",
+          "shape": "Lorentzian",
+          "centre_cm1": 1605.000000006993,
+          "centre_se": 4.279201500337271,
+          "height": 582.196658311641,
+          "height_se": 331.0331674508475,
+          "fwhm_cm1": 48.02329997681503,
+          "fwhm_se": 14.764257875569529,
+          "area": 43917.90198978586
+        }
+      ]
+    }
+  ]
+}

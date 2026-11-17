@@ -1,0 +1,270 @@
+RAMAN SCRIPTS DOCUMENTATION
+Portable supplementary package for the final qualitative thesis workflow
+Joao Pacheco Pereira Cavaco - FCUL, Universidade de Lisboa
+
+1. PURPOSE AND SCOPE
+
+This document describes the code distributed in scripts/. It replaces the
+earlier Raman_Scripts_Documentation.txt description of a two/three-Lorentzian
+pipeline with fixed literature lines and an F-test.
+
+The current pipeline uses a five-band model, marks observed D/G envelope maxima
+and displays unsmoothed baseline-corrected measurements. The thesis uses the
+spectra qualitatively. The fitted curves are exploratory illustrations.
+
+There are eight material groups and 15 spectra:
+  nfes_ca: 2
+  ffes_ca: 2
+  ffes_ca_cb10: 1
+  ffes_ca_cb20: 2
+  ffes_ca_graphite: 2
+  ffes_novolak: 2
+  ffes_novolak_cb15: 2
+  cb_reference: 2
+The CB reference represents the additive. The IDs ending in _1/_2 index spectra,
+not confirmed independent sample batches. Original filenames are retained in
+data/<group>/. In particular, ffes_ca_cb10_1 is the ID assigned to
+15CA-10CB-2.txt. An ID suffix is not a replacement for the original filename.
+
+2. INPUTS, ARCHIVE AND REPRODUCTION
+
+samples.json is a list of records containing id, group, material, filename,
+spectrum and source. Paths are relative to the manifest directory.
+Each TXT has two numeric columns: Raman shift in cm^-1 and measured intensity.
+No data were digitized from figures.
+
+data/ contains byte-identical copies of the 15 original spectra.
+saved_fits/ contains byte-identical NPZ arrays from the previous analysis.
+Its resultados.json preserves the numerical results and settings, with source
+paths changed to relative package paths. provenance.json records the hashes
+of the raw data, arrays, source scripts and original metadata file.
+
+apresentacao_raman.py reads saved_fits/ by default. This is the reproducible
+route to the archived figures. Re-running the fitting script starts a new
+optimization and can give small environment-dependent differences.
+
+3. RAMAN_INTEGRACAO.PY - PROCESSING AND FITTING
+
+sample_list(manifest_path)
+Reads the input manifest, checks for duplicate IDs and verifies that the input
+files exist. It resolves relative source paths from the manifest directory.
+--group filters this list. Without --group all spectra are processed.
+
+analyze_and_plot(sample)
+Despite its historical name, this function performs processing/fitting and
+returns a metadata dictionary and numerical arrays. Figure generation is handled
+separately by plot_group.
+
+Input checks
+The array must have exactly two columns and finite values. Data are sorted by
+Raman shift. Repeated Raman-shift coordinates are rejected.
+
+Baseline
+A degree-one numpy.polyfit is fitted jointly to the measured points in:
+  700-900 cm^-1
+  1750-1800 cm^-1
+The fitted straight line is evaluated over the spectrum and subtracted.
+These windows are analysis choices used as background anchors. They are not
+proof of a physically feature-free interval for every carbon material.
+A linear background may leave curvature or unresolved spectral contributions.
+
+Fitting interval and scaling
+Only 1000-1800 cm^-1 is fitted. The corrected intensities in this interval are
+divided by their maximum to improve numerical scaling. The fitted amplitudes
+and offset are subsequently converted back to the original intensity scale.
+The experimental curve is not smoothed before fitting.
+
+observed_maximum
+A Savitzky-Golay filter with 11 points and polynomial order 3 is applied only
+to locate each observed envelope maximum:
+  D search window: 1250-1420 cm^-1
+  G search window: 1520-1660 cm^-1
+The maximum is selected from the filtered curve within the window. Its coordinate
+is an observed envelope maximum, not a fitted D1 or G component centre.
+The displayed measured curve remains unsmoothed. If a window has no meaningful
+maximum, the code still selects its largest point; visual inspection is needed.
+
+Band model
+BANDS fixes this order: D4, D1, D3, G, D2.
+D4, D1, G and D2 use Lorentzian functions. D3 uses a Gaussian function.
+Each component has height H, centre x0 and full width at half maximum w.
+
+Lorentzian:
+  L(x) = H / [1 + 4 ((x-x0)/w)^2]
+Gaussian:
+  G(x) = H exp[-4 ln(2) ((x-x0)/w)^2]
+The model sums the five components and adds one constant residual background.
+There are 16 fitted parameters: 15 band parameters and the constant offset.
+The constant is separate from the previously subtracted sloping baseline.
+
+Bounds (all centres and FWHM values in cm^-1)
+  Band     Centre interval       FWHM interval
+  D4       1100-1270             40-450
+  D1       1300-1400             40-350
+  D3       1450-1550             60-400
+  G        1550-1605             15-180
+  D2       1605-1655             10-180
+Normalized component heights are bounded between 0 and 3.
+The normalized constant background is bounded between -0.5 and 0.5.
+These bounds are numerical choices of this analysis, not values prescribed by
+Sadezky et al. The code does not force G to be the largest component.
+
+Optimization
+scipy.optimize.least_squares minimizes measured-minus-model residuals.
+Sixteen initial parameter sets are tried for each spectrum.
+The first uses fixed starting heights [0.12,0.75,0.25,0.65,0.20],
+centres [1180,1350,1500,1580,1620] and widths [170,155,170,70,65].
+The other starts use randomized heights, centre offsets and width factors.
+All starts are clipped inside the bounds.
+The random generator is seeded with 20261029 separately for each spectrum.
+The maximum number of function evaluations is 2500 per start.
+ftol, xtol and gtol are 1e-9. Parameter scaling uses x_scale='jac'.
+The successful fit with the smallest residual sum of squares is retained.
+
+Analytic band areas
+areas() integrates each fitted function over the complete mathematical domain:
+  Lorentzian area = pi H w / 2
+  Gaussian area = H w sqrt[pi/(4 ln(2))]
+These are full analytic areas, including tails outside 1000-1800 cm^-1.
+They are not numerical integrals restricted to the displayed interval.
+The sloping baseline and constant residual background are excluded.
+The shaded regions in the figures show only the displayed component segments.
+
+ratios()
+The code retains exploratory numerical summaries:
+  H_D1/H_G = fitted D1 height / fitted G height
+  A_D1/A_G = analytic D1 area / analytic G area
+  f_D3 = analytic D3 area / sum of all five analytic band areas
+These differ from ratios of observed envelope maxima.
+No crystallite/domain size or Tuinstra-Koenig estimate is calculated.
+f_D3 is a fitted spectral-area fraction, not a mass fraction of amorphous carbon.
+
+Local covariance and ratio standard errors
+The normalized least-squares Jacobian J is used to estimate:
+  covariance = pseudoinverse(J transpose J) * RSS/(n-p)
+where n is the number of fitted points and p=16.
+The amplitude/offset units are restored using a diagonal scaling transformation.
+The square roots of covariance diagonal elements give local standard errors.
+A central finite-difference Jacobian of ratios() propagates the covariance into
+the three numerical ratios. This includes local covariance between parameters.
+
+These values assume the model and baseline are fixed and the residuals satisfy
+the usual least-squares assumptions. Overlapping bands, constraints, correlated
+noise and poorly identifiable parameters can undermine the estimate.
+They exclude calibration, instrumental response, focus variation, sampling,
+background/model selection and fabrication variability.
+The final thesis does not present these errors as measurement uncertainties.
+No bootstrap or simulated-spectrum uncertainty assessment is included in this
+publication package.
+
+Fit diagnostics
+- A centre or width within 1% of its allowed range from a bound is flagged.
+- A component height below 0.005 on the normalized scale is flagged as weak.
+- A Jacobian condition number above 1e6 is flagged.
+- Successful starts within 1% of the best RSS are compared. An area-ratio range
+  exceeding 10% of the selected ratio triggers a multistart-sensitivity warning.
+RMSE and R-squared summarize agreement over the fitted interval.
+These diagnostics identify numerical concerns. They do not validate a structural
+assignment or establish that a five-band solution is unique.
+
+Saved arrays
+Each <id>.npz includes:
+  x, raw, baseline, corrected
+  fit_x, fit_y
+  fitted, components, residual
+  parameters, covariance
+The residual is fit_y minus the full model, including its constant background.
+The plotted sum therefore includes that background although individual component
+curves exclude it.
+
+main and output files
+--output specifies a new results directory. Existing output directories are
+rejected. Without it the script creates results/resultados_<timestamp>/.
+The script writes resultados.json, resumo_raman.csv, parametros_bandas.csv,
+one NPZ per spectrum and grouped integration PNG/SVG plots.
+JSON stores settings, software versions, fitted values, maxima and warnings.
+CSV files contain numerical exploratory results even though the thesis analysis
+is qualitative. The input TXT files are read-only.
+
+4. RAMAN_PICOS.PY - SEPARATE EXPERIMENTAL PLOTS
+
+--results must point to a folder containing resultados.json and the matching NPZs.
+configure_plots is imported from raman_integracao.py.
+Each group is displayed with one panel per available spectrum.
+The baseline-corrected experimental curve is normalized to its maximum between
+1000 and 1800 cm^-1. Observed D/G maxima are drawn as dashed vertical lines.
+The titles in this supplementary per-group diagnostic use original filenames.
+The final paired thesis figures use material names instead.
+Existing <group>_picos.png files are rejected to prevent replacement.
+
+5. APRESENTACAO_RAMAN.PY - THESIS FIGURE PAIRS
+
+Default input: saved_fits/.
+Default selection: presentation_selection.json.
+An alternative results folder can be supplied with --results.
+Each figure combines:
+  left: unsmoothed baseline-corrected measured spectrum and observed D/G maxima;
+  right: the same measured spectrum, full fit, and coloured band components;
+  lower right: measured-minus-fitted residuals.
+Both panels read the same NPZ and use the same normalization factor.
+Material names replace source filenames in the figure title.
+The x-axis increases from 1000 to 1800 cm^-1.
+All available spectra are plotted. selection.json labels which belong in the
+main text and which are additional measurements.
+
+Historical spectrum selection
+The original presentation chose a spectrum per material by, in order:
+  fewer bound/weak-component flags;
+  smaller local relative standard error of A_D1/A_G;
+  larger R-squared.
+This was an exploratory presentation criterion, not a physical quality measure.
+The portable version freezes that choice in presentation_selection.json.
+Replotting or refitting does not silently choose a different spectrum.
+The additional spectra remain available to disclose variation in the measurements.
+
+This script exports PNG at 300 dpi and SVG, presentation_summary.csv,
+selection.json and source_results_sha256.txt.
+Output paths must be new. It does not modify LaTeX files.
+
+6. INTERPRETATION IN THE FINAL THESIS
+
+Broad D/G envelopes provide qualitative context for disordered sp2-bonded carbon.
+Interpretation depends on the structural regime, excitation wavelength and
+processing. D/G is not a universally monotonic disorder scale.
+The D3 component does not establish an amorphous-carbon mass fraction.
+G is not required to be the largest fitted band. Overlapping D2/G contributions
+can vary strongly with the model and bounds.
+Raman alone does not measure closed pores, electrical conductivity or the
+individual sodium-storage mechanisms.
+Both CB and polymer-derived carbon can contribute to the composite spectra.
+
+The recorded excitation wavelength is 532 nm. Daily calibration could not be
+confirmed from the available records. No 0.5 cm^-1 calibration uncertainty has
+been assigned. The archived fitting outputs preserve the numerical analysis
+for reproducibility while the final discussion remains qualitative.
+
+7. DIFFERENCES FROM THE EARLIER TXT DOCUMENT
+
+The earlier document referred to a D+D3+G model, fixed literature markers,
+smoothed plotted data, a nested-model F-test and a universal graphitization
+interpretation of ID/IG. These descriptions do not match the current scripts.
+The current pipeline uses four Lorentzians plus one Gaussian, observed maxima,
+unsmoothed displayed measurements and exploratory diagnostics. There is no
+F-test in the packaged five-band workflow.
+The baseline windows are chosen anchors, not guaranteed feature-free intervals.
+The old statement that G should always be the tallest band is not used.
+The local covariance estimates do not constitute a complete uncertainty budget.
+The saved spectra are not confirmed independent sample replicates.
+
+8. REFERENCES
+
+Sadezky et al. (2005). Raman microspectroscopy of soot and related carbonaceous
+materials: spectral analysis and structural information. Carbon 43, 1731-1742.
+DOI: 10.1016/j.carbon.2005.02.018
+
+Ferrari and Robertson (2000). Interpretation of Raman spectra of disordered and
+amorphous carbon. Physical Review B 61, 14095-14107.
+DOI: 10.1103/PhysRevB.61.14095
+
+The five-band model choice follows Sadezky et al. The numerical windows, bounds,
+random starts and selection policy are specific to the scripts in this package.
